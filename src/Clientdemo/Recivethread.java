@@ -34,7 +34,7 @@ public class Recivethread extends Thread {
 
     public void Call(Recivethread rt) throws IOException {
         h1 = new Home1(rt);
-        Populate t1=new Populate(""+h1.model.getRowCount(),"","","");
+        Populate t1=new Populate(""+h1.Table_Model.getRowCount(),"","","");
        // this.send(t1);
     }
 
@@ -73,8 +73,8 @@ public class Recivethread extends Thread {
 //                temp[3] = dis.readUTF();
 //                System.out.println("" + temp[0]);
 //                if (temp[1].equals("0") || temp[2].equals("Remove")) {
-//                    int p = Integer.parseInt(temp[3]);
-//                    h1.update(p);
+//                    int Panel = Integer.parseInt(temp[3]);
+//                    h1.update(Panel);
 //
 //                } else {
 //                    h1.populate(temp[0], temp[1], temp[2], temp[3]);
@@ -84,7 +84,7 @@ public class Recivethread extends Thread {
                 if(flag==0)
                 {
                     serialcode=dis.readInt();
-                     h1.border[2].setTitle("RUNNING SERVICE DESK "+serialcode);
+                     h1.Title_Border[2].setTitle("RUNNING SERVICE DESK "+serialcode);
                    // h1.panel();
                     flag=1;
                 }
@@ -96,9 +96,9 @@ public class Recivethread extends Thread {
                 else{
                     h1.populate(t1.sn.toString(),t1.cn.toString(),t1.t.toString(),t1.d.toString());
                     h1.lt.populate(t1);
-                    Populate t2=new Populate(""+h1.model.getRowCount(),"","","");
+                    Populate t2=new Populate(""+h1.Table_Model.getRowCount(),"","","");
                     
-                    System.out.println("total row :"+h1.model.getRowCount());
+                    System.out.println("total row :"+h1.Table_Model.getRowCount());
                     this.send(t2);
                 }
               

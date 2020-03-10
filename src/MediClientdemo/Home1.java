@@ -45,14 +45,14 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
     public static int k = 1;
     private Container c;
     JTable table[] = new JTable[10];
-    DefaultTableModel model = new DefaultTableModel();
-    JPanel p[] = new JPanel[10];
-    JLabel jl[] = new JLabel[16];
-    JTextField jtf[] = new JTextField[30];
-    JTextArea jta[] = new JTextArea[30];
-    JButton btn[] = new JButton[20];
+    DefaultTableModel Table_Model = new DefaultTableModel();
+    JPanel[] Panel = new JPanel[10];
+    JLabel[] Label = new JLabel[16];
+    JTextField[] Text_Field = new JTextField[30];
+    JTextArea[] Text_Area = new JTextArea[30];
+    JButton[] Button = new JButton[20];
     JScrollPane pane;
-    TitledBorder border[] = new TitledBorder[10];
+    TitledBorder[] Title_Border = new TitledBorder[10];
     JFrame frame;
     JComboBox jcb[] = new JComboBox[10];
     JScrollPane srp[] = new JScrollPane[10];
@@ -83,6 +83,33 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         font();
 
     }
+    public void Create_Server_Service_Border() {
+        f[3] = new Font("Arial", Font.BOLD, 25);
+        Title_Border[1] = new TitledBorder("Server SERVICE");
+        Title_Border[1].setTitleJustification(TitledBorder.LEFT);
+        Title_Border[1].setTitlePosition(TitledBorder.TOP);
+        Title_Border[1].setTitleColor(Color.RED);
+        Title_Border[1].setTitleFont(f[3]);
+    }
+
+    public void Running_Server_Service_Border() {
+        f[3] = new Font("Arial", Font.BOLD, 25);
+        Title_Border[2] = new TitledBorder(Tborder);
+        Title_Border[2].setTitleJustification(TitledBorder.LEFT);
+        Title_Border[2].setTitlePosition(TitledBorder.TOP);
+        Title_Border[2].setTitleFont(f[3]);
+        Title_Border[2].setTitleColor(Color.RED);
+    }
+     public void ListOF_Service_Border()
+     {
+        f[3] = new Font("Arial", Font.BOLD, 25);
+      
+        Title_Border[3] = new TitledBorder("LIST OF SERVICES");
+        Title_Border[3].setTitleJustification(TitledBorder.LEFT);
+        Title_Border[3].setTitlePosition(TitledBorder.TOP);
+        Title_Border[3].setTitleColor(Color.RED);
+        Title_Border[3].setTitleFont(f[3]);
+     }
 
     public void initcomponents() {
         this.setVisible(true);
@@ -92,44 +119,31 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         c.setLayout(null);
         f[3] = new Font("Arial", Font.BOLD, 25);
 
-        border[1] = new TitledBorder("Client SERVICE");
-        border[1].setTitleJustification(TitledBorder.LEFT);
-        border[1].setTitlePosition(TitledBorder.TOP);
-        border[1].setTitleColor(Color.RED);
-        border[1].setTitleFont(f[3]);
-
-        border[2] = new TitledBorder(Tborder);
-        border[2].setTitleJustification(TitledBorder.LEFT);
-        border[2].setTitlePosition(TitledBorder.TOP);
-        border[2].setTitleFont(f[3]);
-        border[2].setTitleColor(Color.RED);
-        border[3] = new TitledBorder("LIST OF SERVICES");
-        border[3].setTitleJustification(TitledBorder.LEFT);
-        border[3].setTitlePosition(TitledBorder.TOP);
-        border[3].setTitleColor(Color.RED);
-        border[3].setTitleFont(f[3]);
+       this.Create_Server_Service_Border();
+       this.Running_Server_Service_Border();
+       this.ListOF_Service_Border();
     }
 
     public void panel() {
 
-        p[1] = new JPanel();
-        c.add(p[1]);
-        p[1].setBounds(800, 100, 350, 200);
-        // p[1].setBackground(new Color(204, 255, 153));
+        Panel[1] = new JPanel();
+        c.add(Panel[1]);
+        Panel[1].setBounds(800, 100, 350, 200);
+        // Panel[1].setBackground(new Color(204, 255, 153));
 
         //panel(2)
-        p[2] = new JPanel();
-        c.add(p[2]);
-        p[2].setBounds(250, 20, 450, 300);
-        p[2].setBackground(new Color(204, 255, 153));
-        p[2].setBorder(border[2]);
+        Panel[2] = new JPanel();
+        c.add(Panel[2]);
+        Panel[2].setBounds(250, 20, 450, 300);
+        Panel[2].setBackground(new Color(204, 255, 153));
+        Panel[2].setBorder(Title_Border[2]);
         //panel(3)
-        p[3] = new JPanel();
-        c.add(p[3]);
-        p[3].setBounds(20, 350, 930, 450);
-        p[3].setBackground(new Color(57, 44, 99));
-        p[3].setBorder(border[3]);
-        p[3].setLayout(null);
+        Panel[3] = new JPanel();
+        c.add(Panel[3]);
+        Panel[3].setBounds(20, 350, 930, 450);
+        Panel[3].setBackground(new Color(57, 44, 99));
+        Panel[3].setBorder(Title_Border[3]);
+        Panel[3].setLayout(null);
         //panel[4] 
 
     }
@@ -137,71 +151,71 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
     public void label() {
 
         //panel 1
-        p[1].setLayout(null);
-        jl[1] = new JLabel("Send Message To Server");
-        p[1].add(jl[1]);
-        jl[1].setBounds(22, 30, 400, 200);
+        Panel[1].setLayout(null);
+        Label[1] = new JLabel("Send Message To Server");
+        Panel[1].add(Label[1]);
+        Label[1].setBounds(22, 30, 400, 200);
 
         //panel(2)
-        p[2].setLayout(null);
-        jl[4] = new JLabel("Name");
-        p[2].add(jl[4]);
-        jl[4].setBounds(20, 30, 100, 50);
-        jl[5] = new JLabel("Gender");
-        p[2].add(jl[5]);
-        jl[5].setBounds(20, 90, 100, 50);
-        jl[6] = new JLabel("Description");
-        p[2].add(jl[6]);
-        jl[6].setBounds(20, 150, 100, 50);
-        jl[7] = new JLabel("Serial");
-        p[2].add(jl[7]);
-        jl[7].setBounds(20, 210, 100, 50);
+        Panel[2].setLayout(null);
+        Label[4] = new JLabel("Name");
+        Panel[2].add(Label[4]);
+        Label[4].setBounds(20, 30, 100, 50);
+        Label[5] = new JLabel("Gender");
+        Panel[2].add(Label[5]);
+        Label[5].setBounds(20, 90, 100, 50);
+        Label[6] = new JLabel("Description");
+        Panel[2].add(Label[6]);
+        Label[6].setBounds(20, 150, 100, 50);
+        Label[7] = new JLabel("Serial");
+        Panel[2].add(Label[7]);
+        Label[7].setBounds(20, 210, 100, 50);
         //panel3
-        jl[8] = new JLabel("Client Search");
-        p[3].add(jl[8]);
-        jl[8].setBounds(350, 30, 150, 35);
-        jl[8].setForeground(Color.WHITE);
-        jl[8].setFont(f[3]);
+        Label[8] = new JLabel("Client Search");
+        Panel[3].add(Label[8]);
+        Label[8].setBounds(350, 30, 150, 35);
+        Label[8].setForeground(Color.WHITE);
+        Label[8].setFont(f[3]);
 
     }
 
     public void textfield() {
         //panel 1
 
-        jta[1] = new JTextArea();
-        srp[1] = new JScrollPane(jta[1]);
-        jta[1].setWrapStyleWord(true);
-        jta[1].setLineWrap(true);
+        Text_Area[1] = new JTextArea();
+        srp[1] = new JScrollPane(Text_Area[1]);
+        Text_Area[1].setWrapStyleWord(true);
+        Text_Area[1].setLineWrap(true);
         srp[1].setBounds(20, 50, 200, 60);
-        p[1].add(srp[1]);
+        Panel[1].add(srp[1]);
 
         //panel(2)
-        jtf[3] = new JTextField();
-        jtf[3].setEditable(false);
-        jta[2] = new JTextArea();
-        jta[2].setLineWrap(true);
-        jta[2].setEditable(false);
-        jta[2].setWrapStyleWord(true);
-        p[2].add(jtf[3]);
-        jtf[3].setBounds(105, 37, 210, 40);
-        srp[2] = new JScrollPane(jta[2]);
-        p[2].add(srp[2]);
+        Text_Field[3] = new JTextField();
+        Text_Field[3].setEditable(false);
+        Text_Area[2] = new JTextArea();
+        Text_Area[2].setLineWrap(true);
+        Text_Area[2].setEditable(false);
+        Text_Area[2].setWrapStyleWord(true);
+        Panel[2].add(Text_Field[3]);
+        Text_Field[3].setBounds(105, 37, 210, 40);
+        srp[2] = new JScrollPane(Text_Area[2]);
+        Panel[2].add(srp[2]);
         srp[2].setBounds(105, 157, 210, 40);
-        jtf[4] = new JTextField();
-        jtf[4].setEditable(false);
-        p[2].add(jtf[4]);
-        jtf[4].setBounds(105, 94, 210, 40);
-        jtf[5] = new JTextField();
-        jtf[5].setEditable(false);
-        p[2].add(jtf[5]);
-        jtf[5].setBounds(105, 220, 100, 30);
+        Text_Field[4] = new JTextField();
+        Text_Field[4].setEditable(false);
+        Panel[2].add(Text_Field[4]);
+        Text_Field[4].setBounds(105, 94, 210, 40);
+        Text_Field[5] = new JTextField();
+        Text_Field[5].setEditable(false);
+        Panel[2].add(Text_Field[5]);
+        Text_Field[5].setBounds(105, 220, 100, 30);
 
         //panel3
-        jtf[6] = new JTextField();
-        p[3].add(jtf[6]);
-        jtf[6].setBounds(700, 30, 150, 40);
-        jtf[6].setFont(f[2]);
-        jtf[6].addKeyListener(this);
+        Text_Field[6] = new JTextField();
+        Panel[3].add(Text_Field[6]);
+        Text_Field[6].setBounds(700, 30, 150, 40);
+        Text_Field[6].setFont(f[2]);
+        Text_Field[6].addKeyListener(this);
 
     }
 
@@ -210,32 +224,32 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         jcb[2].addItem("none");
         jcb[2].addItem("Female");
         jcb[2].addItem("Male");
-        p[3].add(jcb[2]);
+        Panel[3].add(jcb[2]);
         jcb[2].setBounds(460, 30, 210, 40);
         jcb[2].addItemListener(this);
     }
 
     public void Button() {
         //panel 1
-        btn[1] = new JButton("SEND");
-        p[1].add(btn[1]);
-        btn[1].setBounds(240, 50, 80, 60);
+        Button[1] = new JButton("SEND");
+        Panel[1].add(Button[1]);
+        Button[1].setBounds(240, 50, 80, 60);
 
         //panel(2);
-        btn[2] = new JButton();
-        p[2].add(btn[2]);
-        btn[2].setText("Complete");
-        btn[2].setBounds(215, 220, 100, 30);
-        btn[3] = new JButton();
-        p[2].add(btn[3]);
-        btn[3].setText("Start");
-        btn[3].setBounds(125, 260, 150, 30);
+        Button[2] = new JButton();
+        Panel[2].add(Button[2]);
+        Button[2].setText("Complete");
+        Button[2].setBounds(215, 220, 100, 30);
+        Button[3] = new JButton();
+        Panel[2].add(Button[3]);
+        Button[3].setText("Start");
+        Button[3].setBounds(125, 260, 150, 30);
         //Actionlistener
 
-        // btn[1].addActionListener(this);
-        btn[1].addActionListener(this);
-        btn[2].addActionListener(this);
-        btn[3].addActionListener(this);
+        // Button[1].addActionListener(this);
+        Button[1].addActionListener(this);
+        Button[2].addActionListener(this);
+        Button[3].addActionListener(this);
 
     }
 
@@ -243,10 +257,10 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         // System.out.println("1111");
         mb = new JMenuBar();
         //  c.setJMenuBar(mb);
-        p[4] = new JPanel();
-        p[4].setBounds(100, 30, 100, 70);
-        p[4].add(mb);
-        c.add(p[4]);
+        Panel[4] = new JPanel();
+        Panel[4].setBounds(100, 30, 100, 70);
+        Panel[4].add(mb);
+        c.add(Panel[4]);
 
         menu = new JMenu("MENU");
         mitem[1] = new JMenuItem("History Log Table");
@@ -265,7 +279,7 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
 
     public void populate(String sn, String cn, String gen, String des) {
         String rows[] = {sn, cn, gen, des};
-        model.addRow(rows);
+        Table_Model.addRow(rows);
 
     }
 
@@ -274,7 +288,7 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         table[1] = new JTable();
         srp[3] = new JScrollPane(table[1]);
 
-        p[3].add(srp[3]);
+        Panel[3].add(srp[3]);
         srp[3].setBounds(50, 90, 800, 300);
         table[1].setBackground(Color.decode("#058dc7"));
         table[1].setForeground(Color.WHITE);
@@ -282,9 +296,9 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         table[1].setFont(f[4]);
         table[1].setEnabled(false);
         table[1].setRowHeight(table[1].getRowHeight() + 15);
-        model = (DefaultTableModel) table[1].getModel();
+        Table_Model = (DefaultTableModel) table[1].getModel();
         for (int l = 0; l < 4; l++) {
-            model.addColumn(colms[l]);
+            Table_Model.addColumn(colms[l]);
         }
         TableColumn column = null;
 
@@ -316,10 +330,10 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
     }
 
     public void setrunningservice(String sn, String n, String type, String des) {
-        jtf[5].setText("" + sn);
-        jtf[3].setText("" + n);
-        jtf[4].setText("" + type);
-        jta[2].setText("" + des);
+        Text_Field[5].setText("" + sn);
+        Text_Field[3].setText("" + n);
+        Text_Field[4].setText("" + type);
+        Text_Area[2].setText("" + des);
 
     }
 
@@ -332,7 +346,7 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
     }
 
     public void filter(String query) {
-        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(model);
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(Table_Model);
         table[1].setRowSorter(tr);
         if (query != "none") {
             tr.setRowFilter(RowFilter.regexFilter(query));
@@ -343,8 +357,8 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
 
     public void update(int r) {
 
-        model.removeRow(r);
-        int temp = model.getRowCount();
+        Table_Model.removeRow(r);
+        int temp = Table_Model.getRowCount();
         System.out.println("" + r);
         // System.out.println(""+temp+" "+k);
         for (int i = r; i < temp; i++) {
@@ -359,43 +373,43 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
         f[1] = new Font("Arial", Font.BOLD, 16);
         f[2] = new Font("Arial", Font.BOLD, 14);
         f[3] = new Font("Arial", Font.BOLD, 20);
-        jta[1].setFont(f[1]);
-        jl[1].setFont(f[3]);
+        Text_Area[1].setFont(f[1]);
+        Label[1].setFont(f[3]);
         //panel(2)
-        jtf[3].setFont(f[1]);
-        jta[2].setFont(f[2]);
-        jtf[4].setFont(f[1]);
-        jtf[5].setFont(f[1]);
+        Text_Field[3].setFont(f[1]);
+        Text_Area[2].setFont(f[2]);
+        Text_Field[4].setFont(f[1]);
+        Text_Field[5].setFont(f[1]);
         menu.setFont(f[1]);
         for (int l = 1; l <= 4; l++) {
             mitem[l].setFont(f[1]);
         }
         //panel2
-        jl[8].setFont(f[1]);
+        Label[8].setFont(f[1]);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource() == btn[1]) {
+        if (e.getSource() == Button[1]) {
 
             try {
-                String str = jta[1].getText().toString();
+                String str = Text_Area[1].getText().toString();
                 Medipopulate t1 = new Medipopulate("", "Updated Msg", "", "" + str);
                 rt.senddata(t1);
-                jta[1].setText("");
+                Text_Area[1].setText("");
             } catch (IOException ex) {
                 Logger.getLogger(Home1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
-        if (e.getSource() == btn[3]) {
+        if (e.getSource() == Button[3]) {
 
             if (flag == 0) {
 
                 try {
                     this.setrunningservice(table[1].getValueAt(0, 0).toString(), table[1].getValueAt(0, 1).toString(), table[1].getValueAt(0, 2).toString(), table[1].getValueAt(0, 2).toString());
-                    model.removeRow(0);
+                    Table_Model.removeRow(0);
                     Medipopulate t1 = new Medipopulate("", "", "Running", "Remove");
                     rt.senddata(t1);
                 } catch (IOException ex) {
@@ -407,7 +421,7 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
                 JOptionPane.showMessageDialog(null, "YOU ALREADY START THE SERVICE");
             }
 
-        } else if (e.getSource() == btn[2]) {
+        } else if (e.getSource() == Button[2]) {
 
             if (flag != 1) {
                 JOptionPane.showMessageDialog(null, "Please First Start The Service");
@@ -422,7 +436,7 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
                        
                 try {
                     this.setrunningservice(table[1].getValueAt(0, 0).toString(), table[1].getValueAt(0, 1).toString(), table[1].getValueAt(0, 2).toString(), table[1].getValueAt(0, 2).toString());
-                    model.removeRow(0);
+                    Table_Model.removeRow(0);
                     Medipopulate t1 = new Medipopulate("", "", "Running", "Remove");
                     rt.senddata(t1);
                 } catch (IOException ex) {
@@ -479,8 +493,8 @@ public class Home1 extends JFrame implements ActionListener, MouseListener, KeyL
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (e.getSource() == jtf[6]) {
-            filter(jtf[6].getText().toString());
+        if (e.getSource() == Text_Field[6]) {
+            filter(Text_Field[6].getText().toString());
 
         }
     }

@@ -136,7 +136,7 @@ public class Admin_Panel extends JFrame implements ActionListener {
     }
 
     public void menu() {
-       ft[5] = new Font("Arial", Font.BOLD, 16);
+        ft[5] = new Font("Arial", Font.BOLD, 16);
         System.out.println("1111");
         mb = new JMenuBar();
         jp[6] = new JPanel();

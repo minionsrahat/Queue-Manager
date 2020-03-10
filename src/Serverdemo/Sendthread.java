@@ -164,14 +164,14 @@ public class Sendthread extends Thread{
 //             if(str.equalsIgnoreCase("Delete"))
 //             {
 //                  h1.update(t);
-//                  String str2=h1.table[1].getValueAt(t, 0).toString();
-//                  h1.setrunservice( h1.table[1].getValueAt(t, 0).toString(),h1.table[1].getValueAt(t, 1).toString(),"Client no"+str2+" Directly Added From Queue Table");
+//                  String str2=h1.List_Table[1].getValueAt(t, 0).toString();
+//                  h1.setrunservice( h1.List_Table[1].getValueAt(t, 0).toString(),h1.List_Table[1].getValueAt(t, 1).toString(),"Client no"+str2+" Directly Added From Queue Table");
 //                  //System.out.println("HELLO");
 //             }
 //             else
 //             {
-//               h1.setrunservice( h1.table[1].getValueAt(t, 0).toString(),h1.table[1].getValueAt(t, 1).toString(),"");
-//                 h1.model.removeRow(0);
+//               h1.setrunservice( h1.List_Table[1].getValueAt(t, 0).toString(),h1.List_Table[1].getValueAt(t, 1).toString(),"");
+//                 h1.Table_Model.removeRow(0);
 //             }
 //
 //            

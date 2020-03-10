@@ -49,7 +49,7 @@ public class RunningServicesTable extends JFrame implements MouseListener{
         p[1] = new JPanel();
         c.add(p[1]);
         p[1].setBounds(30, 30, 600, 400);
-        // p[1].setBackground(Color.red);
+        // Panel[1].setBackground(Color.red);
 
         p[2] = new JPanel();
         c.add(p[2]);
@@ -59,7 +59,7 @@ public class RunningServicesTable extends JFrame implements MouseListener{
         p[3] = new JPanel();
         c.add(p[3]);
         p[3].setBounds(1250, 450, 600, 380);
-        //  p[3].setBackground(Color.red);
+        //  Panel[3].setBackground(Color.red);
 
         p[4] = new JPanel();
         c.add(p[4]);
@@ -69,7 +69,7 @@ public class RunningServicesTable extends JFrame implements MouseListener{
         p[5] = new JPanel();
         c.add(p[5]);
         p[5].setBounds(640, 250, 600, 400);
-        // p[5].setBackground(Color.red);
+        // Panel[5].setBackground(Color.red);
 
     }
 
@@ -192,7 +192,7 @@ public class RunningServicesTable extends JFrame implements MouseListener{
        
      TableColumn column = null;
       
-        // column = table[1].getColumnModel().getColumn(0);
+        // column = List_Table[1].getColumnModel().getColumn(0);
         for (int i = 1; i <=5; i++) {
         for (int t = 0; t < 4; t++) {
             column = table[i].getColumnModel().getColumn(t);
@@ -224,7 +224,7 @@ public class RunningServicesTable extends JFrame implements MouseListener{
     }
     public void update(int r,int tableno) throws IOException
     {
-        h1.st.deletemsg(tableno, r);
+        h1.Send_Data.deletemsg(tableno, r);
         model[tableno].removeRow(r);
        int temp=model[tableno].getRowCount();
         System.out.println(""+r);              

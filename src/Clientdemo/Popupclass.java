@@ -38,15 +38,15 @@ public class Popupclass extends JPopupMenu implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==itm[1])
         {
-               // h1.st.Senddata("0","Remove",""+h1.table[1].getSelectedRow());
-            h1.setrunningservice(h1.table[1].getValueAt(0,0).toString(), h1.table[1].getValueAt(0,1).toString(),h1.table[1].getValueAt(0,2).toString(),h1.table[1].getValueAt(0,3).toString());
+               // h1.st.Senddata("0","Remove",""+h1.List_Table[1].getSelectedRow());
+            h1.setrunningservice(h1.List_Table[1].getValueAt(0,0).toString(), h1.List_Table[1].getValueAt(0,1).toString(),h1.List_Table[1].getValueAt(0,2).toString(),h1.List_Table[1].getValueAt(0,3).toString());
             try {
-               // h1.rt.send(h1.table[1].getSelectedRow(),"Delete");
+               // h1.rt.send(h1.List_Table[1].getSelectedRow(),"Delete");
             } catch (Exception ex) {
                 Logger.getLogger(Popupclass.class.getName()).log(Level.SEVERE, null, ex);
             }
-          //  h1.model.removeRow(h1.table[1].getSelectedRow());
-          h1.update(h1.table[1].getSelectedRow());
+          //  h1.Table_Model.removeRow(h1.List_Table[1].getSelectedRow());
+          h1.update(h1.List_Table[1].getSelectedRow());
              
                JOptionPane.showMessageDialog(null,"ADDED");
         }

@@ -59,17 +59,17 @@ public void call()
                     System.out.println(""+serialcode);
                     if(serialcode==1)
                     {
-                      h1.border[2].setTitle("HEART DISEASE DESK");
+                      h1.Title_Border[2].setTitle("HEART DISEASE DESK");
                    //    h1.Tborder="HEART DISEASE DESK";
                             
                     }
                       if(serialcode==2)
                     {
-                        h1.border[2].setTitle("EYESIGHT DESK");
+                        h1.Title_Border[2].setTitle("EYESIGHT DESK");
                     }
                         if(serialcode==3)
                     {
-                        h1.border[2].setTitle("LIVER DESK");
+                        h1.Title_Border[2].setTitle("LIVER DESK");
                     }
                 }
                  t1=(Medipopulate)oin.readObject();

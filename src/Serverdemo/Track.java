@@ -38,7 +38,7 @@ public class Track extends Thread {
                System.out.println("total row :"+t1.sn);
                 st.h1.client[i-1]=Integer.parseInt(t1.sn);
                 //st.h1.selectdesk();
-             //   System.out.println("track  ::"+st.h1.client[i-1]);
+             //   System.out.println("track  ::"+Send_Data.h1.client[i-1]);
                 if(t1.t.equalsIgnoreCase("Running"))
                 {
                     st.h1.tablestate(track,""+t1.t);
@@ -53,11 +53,11 @@ public class Track extends Thread {
                    st.h1.rs.jtf[(track)*3].setText(""+t1.d);
                }      
             
-               //System.out.println(""+st.obj.get(0).hashCode());
+               //System.out.println(""+Send_Data.obj.get(0).hashCode());
             } catch (IOException ex) {
                  st.h1.state[i-1]=0;
                 System.out.println("Server Desk :"+i+" Disconnected");
-                st.h1.table[1].setValueAt("Disconnected", i-1, 2);
+                st.h1.List_Table[1].setValueAt("Disconnected", i-1, 2);
                 break;
                 
             } catch (ClassNotFoundException ex) {
